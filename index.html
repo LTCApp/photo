@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد عروض سوق الجملة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🛒 مولد عروض سوق الجملة</h1>
+            <p>أنشئ عروض منتجات جذابة ومهنية</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2>📝 إدخال بيانات المنتج</h2>
+                
+                <div class="form-group">
+                    <label for="productImage">📷 صورة المنتج</label>
+                    <div class="image-upload">
+                        <input type="file" id="productImage" accept="image/*">
+                        <div class="upload-placeholder">
+                            <span>اختر صورة المنتج</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productName">🏷️ اسم المنتج</label>
+                    <input type="text" id="productName" placeholder="مثال: رز بسمتي فاخر">
+                </div>
+
+                <div class="form-group">
+                    <label for="originalPrice">💰 السعر قبل الخصم</label>
+                    <input type="number" id="originalPrice" placeholder="مثال: 25" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="discountPrice">🎯 السعر بعد الخصم</label>
+                    <input type="number" id="discountPrice" placeholder="مثال: 20" step="0.01">
+                </div>
+
+                <button id="generateOffer" class="generate-btn">🎨 إنشاء العرض</button>
+            </div>
+
+            <div class="preview-section">
+                <h2>👁️ معاينة العرض</h2>
+                <div id="offerPreview" class="offer-preview">
+                    <div class="offer-card">
+                        <div class="store-header">
+                            <h1>🛒 سوق الجملة</h1>
+                            <p>أفضل الأسعار والجودة</p>
+                        </div>
+                        
+                        <div class="product-section">
+                            <div class="product-image">
+                                <div class="image-placeholder">📦</div>
+                            </div>
+                            
+                            <div class="product-info">
+                                <h3 class="product-name">اسم المنتج</h3>
+                                
+                                <div class="price-section">
+                                    <div class="original-price">
+                                        <span class="label">السعر الأصلي:</span>
+                                        <span class="price">0 ر.س</span>
+                                    </div>
+                                    
+                                    <div class="discount-price">
+                                        <span class="label">السعر بعد الخصم:</span>
+                                        <span class="price">0 ر.س</span>
+                                    </div>
+                                    
+                                    <div class="savings">
+                                        <span class="savings-text">توفر: 0 ر.س</span>
+                                        <span class="savings-percent">(0%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="offer-footer">
+                            <div class="offer-badge">🔥 عرض خاص</div>
+                            <div class="contact-info">
+                                <p>📞 للطلب: 920000000</p>
+                                <p>📍 العنوان: المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <button id="downloadOffer" class="download-btn">📥 تحميل العرض</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

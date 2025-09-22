@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.input-section, .preview-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.input-section h2, .preview-section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+.image-upload {
+    position: relative;
+}
+
+.image-upload input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.upload-placeholder {
+    background: #f8f9fa;
+    border: 2px dashed #bdc3c7;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    color: #7f8c8d;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-placeholder:hover {
+    background: #e9ecef;
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.generate-btn, .download-btn {
+    width: 100%;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.generate-btn:hover, .download-btn:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.offer-preview {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.offer-card {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid #e74c3c;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #e74c3c, #f39c12, #e74c3c);
+}
+
+.store-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.store-header h1 {
+    font-size: 2.2rem;
+    color: #e74c3c;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.store-header p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.product-section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.product-image {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #e1e8ed;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-placeholder {
+    font-size: 3rem;
+    color: #bdc3c7;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-name {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.price-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    border-right: 5px solid #e74c3c;
+}
+
+.original-price, .discount-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.original-price .price {
+    color: #95a5a6;
+    text-decoration: line-through;
+    font-weight: 600;
+}
+
+.discount-price .price {
+    color: #e74c3c;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.savings {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.savings-percent {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.offer-footer {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin: -25px -25px -25px -25px;
+    margin-top: 25px;
+}
+
+.offer-badge {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.download-section {
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .product-image {
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .input-section, .preview-section {
+        padding: 20px;
+    }
+    
+    .product-name {
+        font-size: 1.5rem;
+    }
+    
+    .store-header h1 {
+        font-size: 1.8rem;
+    }
+}
